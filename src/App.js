@@ -9,7 +9,7 @@ import Settings from "./components/Settings";
 
 const App = () => (
   <ChatProvider>
-    <Router>
+    <Router basename="/RealTime-ChatApp">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
