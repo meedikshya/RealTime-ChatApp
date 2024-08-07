@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export const Navbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,12 +19,12 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="text-white hover:text-gray-300" href="/chat-room">
+            <a className="text-white hover:text-gray-300" href="/chat">
               Chat Room
             </a>
           </li>
           <li>
-            <a className="text-white hover:text-gray-300" href="/user">
+            <a className="text-white hover:text-gray-300" href="/profile">
               User
             </a>
           </li>
@@ -51,3 +51,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;
