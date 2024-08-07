@@ -1,29 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Home } from "./pages/Home";
-import { UserProfile } from "./pages/UserProfile";
-import { Settings } from "./pages/Settings";
-import { ChatRoomPage } from "./pages/ChatRoomPage";
-// import { Footer } from "./components/Footer";
+import { ChatProvider } from "./context/ChatContext";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import ChatRoom from "./components/ChatRoom";
+import UserProfile from "./components/UserProfile";
+import Settings from "./components/Settings";
 
-function App() {
-  useEffect(() => {
-    document.title = "Lets-Chat";
-  }, []);
-
-  return (
+const App = () => (
+  <ChatProvider>
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/chat-room" element={<ChatRoomPage />} />
-        <Route path="/user" element={<UserProfile />} />
+        <Route path="/chat" element={<ChatRoom />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/userProfile" element={<UserProfile />} />
       </Routes>
     </Router>
-  );
-}
+  </ChatProvider>
+);
 
 export default App;
