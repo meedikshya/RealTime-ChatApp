@@ -24,7 +24,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 
 1. **Clone the repository:**
    
-   git clone 
+   git clone https://github.com/meedikshya/RealTime-ChatApp
 
 2. Navigate to the project directory:
    
